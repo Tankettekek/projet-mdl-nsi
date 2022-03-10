@@ -18,6 +18,11 @@
             xmlhttp.send();
         }
         
+        window.addEventListener("load", myInit, true); function myInit(){
+            loadDays("liste_jours");
+            loadDays("liste_creneaux");
+        } 
+        
     </script>
 
 </head>
@@ -72,12 +77,12 @@
             <h2>Réservation du créneau</h2>
                 <div class="grid">
                     <label for="a1">Jour
-                        <select name="jour" id="liste_jours" onmouseover="loadDays('liste_jours')">
+                        <select name="jour" id="liste_jours">
                         
                         </select>
                     </label>
                     <label for="a1">Creneaux
-                        <select name="Creneaux" id="liste_creneaux" onmouseover="loadDays('liste_creneaux')">
+                        <select name="Creneaux" id="liste_creneaux">
 
                         </select>  
                     </label>
