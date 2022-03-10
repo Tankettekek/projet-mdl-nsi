@@ -11,15 +11,21 @@
     <main class="container">
         <h1>Formulaire</h1>
 		<h2>information sur vous</h2>
-        <form method = "post" "action="../server/server.php">
-            <label for="a1">Nom</label>
-			<input type="text" name="nom" id="a1"/>
-			<label for="a1">Prénom</label>
-			<input type="text" name="prenom" id="a1"/>
-			<label for="a1">classe</label>
-			<input type="text" name="classe" id="a1"/>
-			<label for="a1">instrument</label>
-			<input type="text" name="instrument" id="a1"/>
+        <form method = "post" action="../server/server.php">
+            <div class="grid">
+                <label for="a1">Nom
+			        <input type="text" name="nom" id="a1"/>
+                </label>
+			    <label for="a1">Prénom
+                    <input type="text" name="prenom" id="a1"/>
+                </label>
+            </div>
+            <label for="a1">classe
+			    <input type="text" name="classe" id="a1"/>
+            </label>
+            <label for="a1">instrument
+		    	<input type="text" name="instrument" id="a1"/>
+            </label>
         </form>
     </main>
 </body>
