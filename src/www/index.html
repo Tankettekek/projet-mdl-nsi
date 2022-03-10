@@ -7,14 +7,14 @@
     <title>Formulaire de reservation</title>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
     <script>
-        function loadDays(){
+        function loadDays(caller){
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange=function(){
                 if(this.readyState==4 && this.status==200){
-                    document.getElementById("liste_jours").innerHTML = this.responseText;
+                    document.getElementById(caller).innerHTML = this.responseText;
                 }
             }
-            xmlhttp.open("GET", "server/jours.php", true);
+            xmlhttp.open("GET", "server/horaire.php?q="+caller, true);
             xmlhttp.send();
         }
         
@@ -72,9 +72,14 @@
             <h2>Réservation du créneau</h2>
                 <div class="grid">
                     <label for="a1">Jour
-                        <select type="name="jour" id="liste_jours" onclick="loadDays()">
+                        <select name="jour" id="liste_jours" onmouseover="loadDays('liste_jours')">
                         
                         </select>
+                    </label>
+                    <label for="a1">Creneaux
+                        <select name="Creneaux" id="liste_creneaux" onmouseover="loadDays('liste_creneaux')">
+
+                        </select>  
                     </label>
                 </div>
             <button type="submit"> Envoyer </button >
