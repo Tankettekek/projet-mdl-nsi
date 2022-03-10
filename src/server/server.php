@@ -1,5 +1,5 @@
 <?php
-
+$test = $_POST["reponse"]
 ?>
 <!DOCTYPE html>
 <html>
