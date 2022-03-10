@@ -1,0 +1,15 @@
+<?php
+	$a = $_POST["age"];
+	$nom = $_POST["nom"];
+?>
+<!DOCTYPE html>
+<html>
+	<head>
+		...
+	</head>
+	<body>
+		…
+		Traitement et affichage
+		…
+	</body>
+</html>
