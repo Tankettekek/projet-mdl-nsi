@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de reservation</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <script>
+        function loadDays(){
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange=function(){
+                if(this.readyState==4 && this.status==200){
+                    document.getElementById("liste_jours").innerHTML = this.responseText;
+                }
+            }
+            xmlhttp.open("GET", "server/jours.php", true);
+            xmlhttp.send();
+        }
+        
+    </script>
+
+</head>
+<body>
+    <main class="container">
+        <h1>Formulaire</h1>
+		<h2>Informations sur vous</h2>
+        <form method = "post" action="../server/server.php">
+            <div class="grid">
+                <label for="a1">Nom
+			        <input type="text" name="nom" id="a1"/>
+                </label>
+			    <label for="a1">Prénom
+                    <input type="text" name="prenom" id="a1"/>
+                </label>
+            </div>
+            <div class="grid">
+                <label for="a1">Niveau
+			        <select type="text" name="niveau" id="a1">
+                        <option value="1">Seconde</option>
+                        <option value="2">Première</option>
+                        <option value="3">Terminal</option>
+                    </select>
+                </label>
+                <label for="a1">Classe
+	    		    <select type="text" name="classe" id="a1">
+                        <option value="1">A</option>
+                        <option value="2">B</option>
+                        <option value="3">C</option>
+                        <option value="4">D</option>
+                        <option value="5">E</option>
+                        <option value="6">F</option>
+                        <option value="7">G</option>
+                        <option value="8">H</option>
+                        <option value="9">I</option>
+                    </select>
+                </label>
+            </div>
+            <div class="grid">
+                <label for="a1">Instrument
+                    <select type="text" name="Instrument" id="a1">
+                        <option value="1">Piano</option>
+                        <option value="2">Guitare</option>
+                        <option value="3">Violon</option>
+                        <option value="4">Autre</option>
+                    </select>
+                </label>
+                <label for="a1">Instrument si autre:
+                    <input type="text" name="Instrument" id="a1"/>
+                </label>
+            </div>
+            <h2>Réservation du créneau</h2>
+                <div class="grid">
+                    <label for="a1">Jour
+                        <select type="name="jour" id="liste_jours" onclick="loadDays()">
+                        
+                        </select>
+                    </label>
+                </div>
+            <button type="submit"> Envoyer </button >
+        </form>
+    </main>
+</body>
+</html>
