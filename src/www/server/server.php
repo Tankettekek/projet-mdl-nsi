@@ -36,16 +36,19 @@ fclose($fichier);
         	body{
             	background-image: url("../img/image3.png");
         	}
+			.container{
+				text-align:center;
+				background-color: #11191f;
+            	padding-left: 50px;
+            	padding-right: 50px;
+			}
     	</style>
 	</head>
 	<body>
-		<main>
-			<?php echo"<h1>" . $nom2 . "</h1>" ; ?>
-			<h1><?php echo $prenom ; ?></h1>
-			<?php echo $classe_t ; ?>
-			<?php echo $instrument ; ?>
-			<?php echo $jour ; ?>
-			<?php echo $creneaux ; ?>
+		<main class="container">
+			<h1>Votre réservation a été pris en compte</h1>
+			<img src = "../img/checked.png"/ class="imgcheck">
+			<h2>Merci <?php echo $nom2 . " " . $prenom ?> de vous être enregistrée !</h2>
 		</main>
 	</body>
 </html>
