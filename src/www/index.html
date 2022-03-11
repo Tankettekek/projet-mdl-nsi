@@ -14,13 +14,17 @@
                     document.getElementById(caller).innerHTML = this.responseText;
                 }
             }
-            xmlhttp.open("GET", "server/horaire.php?q="+caller, true);
+            if (caller == "liste_jours"){
+                xmlhttp.open("GET", "server/horaire.php?q="+caller, true);
+            } else if (caller == "liste_creneaux") {
+                var day = document.getElementById("liste_jours").selectedOptions[0].value;
+                xmlhttp.open("GET", "server/horaire.php?q="+caller+"&d="+day, true);
+            }
             xmlhttp.send();
         }
         
         window.addEventListener("load", myInit, true); function myInit(){
             loadDays("liste_jours");
-            loadDays("liste_creneaux");
         } 
         
     </script>
@@ -86,7 +90,7 @@
             <h2>Réservation du créneau</h2>
                 <div class="grid">
                     <label for="a1">Jour
-                        <select name="jour" id="liste_jours">
+                        <select name="jour" id="liste_jours" onchange="loadDays('liste_creneaux')">
                         
                         </select>
                     </label>
