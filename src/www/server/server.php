@@ -21,6 +21,7 @@ fputs($fichier, $jour.";".$creneaux.";".$nom2.";".$prenom.";".$classe_t.";".$ins
 fclose($fichier);
 $fichier = fopen("info.csv", "r");
 $variable = fgets($fichier);
+fclose($fichier);
 
 ?>
 <!DOCTYPE html>
@@ -33,7 +34,7 @@ $variable = fgets($fichier);
     	<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
 		<style>
         	body{
-            	background-image: url("../img/peakpx.jpg");
+            	background-image: url("../img/image3.png");
         	}
     	</style>
 	</head>
