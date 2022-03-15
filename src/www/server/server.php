@@ -19,9 +19,7 @@ if ($instrument == "Autre"){
 $fichier = fopen("info.csv", "a");
 fputs($fichier, $jour.";".$creneaux.";".$nom2.";".$prenom.";".$classe_t.";".$instrument.";"."\n" );
 fclose($fichier);
-$fichier = fopen("info.csv", "r");
-$variable = fgets($fichier);
-fclose($fichier);
+
 
 ?>
 <!DOCTYPE html>
@@ -47,7 +45,7 @@ fclose($fichier);
 	<body>
 		<main class="container">
 			<h1>Votre réservation a été pris en compte</h1>
-			<img src = "../img/checked.png"/ class="imgcheck">
+			<p><font size=5>✓</font></p>
 			<h2>Merci <?php echo $nom2 . " " . $prenom ?> de vous être enregistrée !</h2>
 		</main>
 	</body>
