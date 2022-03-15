@@ -45,7 +45,7 @@ fclose($fichier);
 	<body>
 		<main class="container">
 			<h1>Votre réservation a été pris en compte</h1>
-			<p><font size=5>✓</font></p>
+			<p style="font-size:190px;">✓</p>
 			<h2>Merci <?php echo $nom2 . " " . $prenom ?> de vous être enregistrée !</h2>
 		</main>
 	</body>
