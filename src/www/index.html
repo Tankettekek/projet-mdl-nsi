@@ -30,7 +30,7 @@
     </script>
     <style>
         body{
-            background-image: url("img/image3.png");
+            background-color: grey;
         }
         .container{
             background-color: #11191f;
@@ -46,22 +46,22 @@
         <form method = "post" action="server/server.php">
             <div class="grid">
                 <label for="a1">Nom
-			        <input type="text" name="nom" id="a1"/>
+			        <input type="text" name="nom" id="a1" required="required"/>
                 </label>
 			    <label for="a1">Prénom
-                    <input type="text" name="prenom" id="a1"/>
+                    <input type="text" name="prenom" id="a1" required="required"/>
                 </label>
             </div>
             <div class="grid">
                 <label for="a1">Niveau
-			        <select type="text" name="niveau" id="a1">
+			        <select type="text" name="niveau" id="a1" required="required">
                         <option value="Seconde">Seconde</option>
                         <option value="Première">Première</option>
                         <option value="Terminal">Terminal</option>
                     </select>
                 </label>
                 <label for="a1">Classe
-	    		    <select type="text" name="classe" id="a1">
+	    		    <select type="text" name="classe" id="a1" required="required">
                         <option value="A">A</option>
                         <option value="B">B</option>
                         <option value="C">C</option>
@@ -76,7 +76,7 @@
             </div>
             <div class="grid">
                 <label for="a1">Instrument
-                    <select type="text" name="Instrument" id="a1">
+                    <select type="text" name="Instrument" id="a1" required="required">
                         <option value="Piano">Piano</option>
                         <option value="Guitare">Guitare</option>
                         <option value="Violon">Violon</option>
@@ -90,12 +90,12 @@
             <h2>Réservation du créneau</h2>
                 <div class="grid">
                     <label for="a1">Jour
-                        <select name="jour" id="liste_jours" onchange="loadDays('liste_creneaux')" onfocus="this.selectedIndex = -1;">
+                        <select name="jour" id="liste_jours" onchange="loadDays('liste_creneaux')" onfocus="this.selectedIndex = -1;" required="required">
                         
                         </select>
                     </label>
                     <label for="a1">Creneaux
-                        <select name="Creneaux" id="liste_creneaux">
+                        <select name="Creneaux" id="liste_creneaux" required="required">
 
                         </select>  
                     </label>
