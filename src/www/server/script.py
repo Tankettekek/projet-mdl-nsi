@@ -41,7 +41,7 @@ def retour_horaires(jour):
     with open('info.csv', 'r') as f:
         reader = csv.reader(f, delimiter=";")
         for row in reader:
-            if jour == row[0]:
+            if jour in row:
                 for heure in liste_heures:
                     if heure in row:
                         liste_heures.remove(heure)
