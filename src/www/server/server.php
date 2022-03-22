@@ -17,7 +17,7 @@ if ($instrument == "Autre"){
 
 // on envoie le résulta dans le fichier csv
 $fichier = fopen("info.csv", "a");
-fputs($fichier, $jour.";".$creneaux.";".$nom2.";".$prenom.";".$classe_t.";".$instrument."\n" );
+fputs($fichier, $jour.";".$creneaux.";".$nom2.";".$prenom.";".$classe_t.";".$instrument.";"."\n" );
 fclose($fichier);
 
 
