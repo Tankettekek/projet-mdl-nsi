@@ -21,6 +21,9 @@
     foreach($pdata as $key => $element){
         $out .= "<tr>";
         foreach($element as $subkey => $subelement){
+            if ($subkey == 0){
+                $out .= "<td>" . date('d/m/Y H:i', $subelement) . "</td>";
+            }
             $out .= "<td>$subelement</td>";
         }
         $out .= "</tr>";
