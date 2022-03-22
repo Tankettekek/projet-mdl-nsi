@@ -14,8 +14,8 @@ def jeudis_suivants():
         days_delta += 7
     
     jeudi_prochain = test_date + datetime.timedelta(days_delta)
-    jeudi_deuxieme_procain = jeudi_prochain +datetime.timedelta(days_delta)
-    jeudi_troi_prochain = jeudi_deuxieme_procain + datetime.timedelta(days_delta)
+    jeudi_deuxieme_procain = jeudi_prochain +datetime.timedelta(7)
+    jeudi_troi_prochain = jeudi_deuxieme_procain + datetime.timedelta(7)
 
     return jeudi_prochain.strftime("%d/%m/%Y"), jeudi_deuxieme_procain.strftime("%d/%m/%Y"), jeudi_troi_prochain.strftime("%d/%m/%Y")
 
