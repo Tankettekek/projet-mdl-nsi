@@ -18,6 +18,7 @@
     array_multisort($colonnes, SORT_ASC, $pdata);
     $out  = "";
     $out .= "<table>";
+    $out .= "<tr><th>Creneau</th><th>Temps UNIX</th><th>Prenom</th><th>Nom</th><th>Classe</th><th>Instrument</th></tr>"
     foreach($pdata as $key => $element){
         $out .= "<tr>";
         foreach($element as $subkey => $subelement){
