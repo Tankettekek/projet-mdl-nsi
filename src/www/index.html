@@ -43,7 +43,7 @@
     <main class="container">
         <h1>Formulaire</h1>
 		<h2>Informations sur vous</h2>
-        <form method = "post" action="server/server.php">
+        <form method = "post" action="server/server.php"> <!---Le formulaire envoie les données au serveur avec la méthode Post-->
             <div class="grid">
                 <label for="a1">Nom
 			        <input type="text" name="nom" id="a1" required="required"/>
@@ -54,10 +54,10 @@
             </div>
             <div class="grid">
                 <label for="a1">Niveau
-			        <select type="text" name="niveau" id="a1" required="required">
+			        <select type="text" name="niveau" id="a1" required="required"><!--Liste pour la classe sous forme de menu déroulant-->
                         <option value="Seconde">Seconde</option>
-                        <option value="Première">Première</option>
-                        <option value="Terminal">Terminal</option>
+                        <option value="Premiere">Première</option>
+                        <option value="Terminale">Terminale</option>
                     </select>
                 </label>
                 <label for="a1">Classe
@@ -88,7 +88,7 @@
                 </label>
             </div>
             <h2>Réservation du créneau</h2>
-                <div class="grid">
+                <div class="grid"><!--Charge les jours selon les créneaux disponibles et les jours à venire-->
                     <label for="a1">Jour
                         <select name="jour" id="liste_jours" onchange="loadDays('liste_creneaux')" onfocus="this.selectedIndex = -1;" required="required">
                         
