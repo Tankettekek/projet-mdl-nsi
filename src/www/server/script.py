@@ -8,7 +8,7 @@ def jeudis_suivants():
     test_date = datetime.datetime.now() 
     weekday_idx = 3
     
-    # computing delta days
+    #calcul de la différence des jours 
     days_delta = weekday_idx - test_date.weekday()
     if days_delta <= 0:
         days_delta += 7
