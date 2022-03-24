@@ -30,6 +30,9 @@
         $out .= "</tr>";
     }
     $out .= "</table>";
+
+    $img = "";
+    exec(sprintf("python server/graph.py '%s' '%s'", $q, $d), $img);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +44,7 @@
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
     <style>
         body{
-            background-image: url("img/410283.jpg");
+            background-image: url("img/wp2406589.webp");
         }
         .container{
             display: flex;
@@ -56,7 +59,13 @@
 </head>
 <body>
     <main class="container">
-        <?php echo $out ?>
+        <div>
+            <h2>Tableau</h2>
+            <?php echo $out ?>
+        </div>
+        <div>
+            <h2>Calendrier</h2>
+            <?php echo $img ?>
     </main>
 </body>
 </html>
