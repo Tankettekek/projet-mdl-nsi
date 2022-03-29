@@ -31,8 +31,9 @@
     }
     $out .= "</table>";
 
-    $img = "";
-    exec(sprintf("python server/graph.py '%s' '%s'", $q, $d), $img);
+    $img_a = [];
+    exec(sprintf("python server/graph.py"), $img_a);
+    $img = $img_a[0];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,9 +48,6 @@
             background-image: url("img/wp2406589.webp");
         }
         .container{
-            display: flex;
-            justify-content: center;
-            align-items: center;
             background-color: #11191f;
             padding-left: 50px;
             padding-right: 50px;
@@ -65,7 +63,7 @@
         </div>
         <div>
             <h2>Calendrier</h2>
-            <?php echo $img ?>
+            <img src=<?php echo $img ?>/>
     </main>
 </body>
 </html>

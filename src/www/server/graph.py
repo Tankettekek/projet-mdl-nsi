@@ -11,7 +11,7 @@ for n in niveau:
         classes.append(n + " " + l)
 
 
-data = pd.read_csv("info.csv", usecols=["Classe"], sep=";")
+data = pd.read_csv("./server/info.csv", usecols=["Classe"], sep=";")
 classe = data['Classe'].tolist()
 
 for c in classes:
@@ -19,20 +19,25 @@ for c in classes:
 
 del classes
 n = ["1", "T", "2"]
-classes  =[]
+classes = []
 for n in n:
     for l in lettres:
-        classes.append(n + " " + l)
+        classes.append(n + "°" + l)
 
-
+while 0 in classes_n:
+    i = classes_n.index(0)
+    if classes_n[i] == 0:
+        del classes_n[i]
+        del classes[i]
 
 PATH = "/img/tmp/" + str(int(time.time())) + ".png"
 
+plt.style.use('dark_background')
 plt.bar(classes, classes_n)
 plt.xlabel("Classes")
-plt.ylabel("Nombre d'eleves")
+plt.ylabel("Nombre d'éleves")
 plt.title("Repartition par classes")
-plt.savefig(".." + PATH)
+plt.savefig("." + PATH)
 
 print(PATH)
 
