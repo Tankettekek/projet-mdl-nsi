@@ -32,7 +32,7 @@ fclose($fichier);
     	<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
 		<style>
         	body{
-            	background-image: url("../img/image3.png");
+            	background-image: url("../img/bg.webp");
         	}
 			.container{
 				text-align:center;
@@ -44,7 +44,7 @@ fclose($fichier);
 	</head>
 	<body>
 		<main class="container">
-			<h1>Votre réservation a été pris en compte</h1>
+			<h1>Votre réservation a bien été pris en compte</h1>
 			<p style="font-size:190px;">✓</p>
 			<h2>Merci <?php echo $prenom . " " . $nom2 ?> de vous être enregistré(e) !</h2>
 		</main>

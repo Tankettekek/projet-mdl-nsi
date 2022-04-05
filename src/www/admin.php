@@ -45,7 +45,7 @@
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
     <style>
         body{
-            background-image: url("img/wp2406589.webp");
+            background-image: url("img/bg.webp");
         }
         .container{
             background-color: #11191f;
@@ -62,7 +62,7 @@
             <?php echo $out ?>
         </div>
         <div>
-            <h2>Calendrier</h2>
+            <h2>Graphique</h2>
             <img src=<?php echo $img ?>/>
     </main>
 </body>

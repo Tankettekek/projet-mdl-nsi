@@ -30,7 +30,7 @@
     </script>
     <style>
         body{
-            background-image: url("img/410283.jpg");
+            background-image: url("img/bg.webp");
         }
         .container{
             background-color: #11191f;
@@ -41,8 +41,8 @@
 </head>
 <body>
     <main class="container">
-        <h1>Formulaire</h1>
-		<h2>Informations sur vous</h2>
+        <h1>Résérvation de crénaux musicaux</h1>
+		<h2>Informations vous concernant</h2>
         <form method = "post" action="server/server.php"> <!---Le formulaire envoie les données au serveur avec la méthode Post-->
             <div class="grid">
                 <label for="a1">Nom
@@ -90,20 +90,20 @@
                     <input type="text" name="Instrument2" id="a1"/>
                 </label>
             </div>
-            <h2>Réservation du créneau</h2>
+            <h2>Réservation de votre horaire de passage</h2>
                 <div class="grid"><!--Charge les jours selon les créneaux disponibles et les jours à venire-->
                     <label for="a1">Jour
                         <select name="jour" id="liste_jours" onchange="loadDays('liste_creneaux')" onfocus="this.selectedIndex = -1;" required="required">
                         
                         </select>
                     </label>
-                    <label for="a1">Creneaux
+                    <label for="a1">Heure de passage
                         <select name="Creneaux" id="liste_creneaux" required="required">
 
                         </select>  
                     </label>
                 </div>
-            <button type="submit"> Envoyer </button >
+            <button type="submit"> S'inscrire </button >
         </form>
     </main>
 </body>
