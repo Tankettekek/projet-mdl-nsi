@@ -2,7 +2,7 @@ from matplotlib import pyplot as plt
 import pandas as pd
 import time
 
-niveau = ["Premiere", "Terminale", "Seconde"]
+niveau = ["Première", "Terminale", "Seconde"]
 lettres = "ABCDEFGHIJKL"
 classes = []
 classes_n = []
@@ -35,8 +35,8 @@ PATH = "/img/tmp/" + str(int(time.time())) + ".png"
 plt.style.use('dark_background')
 plt.bar(classes, classes_n)
 plt.xlabel("Classes")
-plt.ylabel("Nombre d'éleves")
-plt.title("Repartition par classes")
+plt.ylabel("Nombre d'élèves")
+plt.title("Répartition par classes")
 plt.savefig("." + PATH)
 
 print(PATH)
