@@ -30,7 +30,7 @@ while 0 in classes_n:
         del classes_n[i]
         del classes[i]
 
-PATH = "/img/tmp/" + str(int(time.time())) + ".png"
+PATH = "/img/tmp/graph.png"
 
 plt.style.use('dark_background')
 plt.bar(classes, classes_n)
