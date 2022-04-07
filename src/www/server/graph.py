@@ -2,7 +2,7 @@ from matplotlib import pyplot as plt
 import pandas as pd
 import time
 
-niveau = ["Première", "Terminale", "Seconde"]
+niveau = ["Premiere", "Terminale", "Seconde"]
 lettres = "ABCDEFGHIJKL"
 classes = []
 classes_n = []
