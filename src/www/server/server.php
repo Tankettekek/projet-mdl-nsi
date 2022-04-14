@@ -15,7 +15,7 @@ if ($instrument == "Autre"){
     $instrument =  $instrument2;
 ;}
 
-// on envoie le résulta dans le fichier csv
+// on envoie le résultat dans le fichier csv
 $fichier = fopen("info.csv", "a");
 fputs($fichier, $jour.";".$creneaux.";".$nom2.";".$prenom.";".$classe_t.";".$instrument."\n" );
 fclose($fichier);
@@ -31,22 +31,24 @@ fclose($fichier);
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     	<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
 		<style>
-        	body{
-            	background-image: url("../img/bg.webp");
-        	}
+        		body{
+				padding-top:30px; 
+           			background-image: url("../img/bg.webp");
+        			min-height: 100vh;
+			}
 			.container{
+				border-radius: 15px;
 				text-align:center;
 				background-color: #11191f;
-            	padding-left: 50px;
-            	padding-right: 50px;
+            			padding: 50px;
 			}
     	</style>
 	</head>
 	<body>
 		<main class="container">
-			<h1>Votre réservation a bien été pris en compte</h1>
-			<p style="font-size:190px;">✓</p>
-			<h2>Merci <?php echo $prenom . " " . $nom2 ?> de vous être enregistré(e) !</h2>
+			<h3>Votre réservation a bien été prise en compte</h3>
+			<img src="/img/logo2.png" style="width:60vh; height: auto;"/>
+			<h3 style="padding-top: 20px;">Merci <?php echo $prenom . " " . $nom2 ?> de vous être enregistré(e) !</h3>
 		</main>
 	</body>
 </html>

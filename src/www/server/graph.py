@@ -37,7 +37,7 @@ plt.bar(classes, classes_n)
 plt.xlabel("Classes")
 plt.ylabel("Nombre d'élèves")
 plt.title("Répartition par classes")
-plt.savefig("." + PATH)
+plt.savefig("/var/www/html/img/tmp/graph.png")
 
 print(PATH)
 

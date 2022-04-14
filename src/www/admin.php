@@ -31,9 +31,8 @@
     }
     $out .= "</table>";
 
-    $img_a = [];
     exec(sprintf("python server/graph.py"), $img_a);
-    $img = $img_a[0];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,26 +43,39 @@
     <title>Page d'administration</title>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
     <style>
-        body{
-            background-image: url("img/bg.webp");
-        }
+	body{
+	    background-color: #11191f;
+	}
         .container{
             background-color: #11191f;
             padding-left: 50px;
             padding-right: 50px;
-            height: 100vh;
+            min-height: 100vh;
         }
+	img{
+	    width: 100%;
+	    height: 100%;
+	}
+	h3{
+	    color: #edf0f3;
+	}
+	th{
+	    color: #edf0f3;
+	}
+	td{
+	    color: #eceff4;
+	}
     </style>
 </head>
 <body>
     <main class="container">
         <div>
-            <h2>Tableau</h2>
+            <h3>Tableau</h3>
             <?php echo $out ?>
         </div>
         <div>
-            <h2>Graphique</h2>
-            <img src=<?php echo $img ?>/>
+            <h3>Graphique</h3>
+            <img src="/img/tmp/graph.png"/>
     </main>
 </body>
 </html>
